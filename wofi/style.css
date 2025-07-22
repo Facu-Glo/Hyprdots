@@ -1,0 +1,65 @@
+window {
+    margin: 0px;
+    border: 2px solid #1a191c;
+    border-radius: 5px;
+    background-color: #1a191c;
+    font-family: JetBrains Mono NL SemiBold;
+    font-size: 16px;
+}
+
+#input {
+    margin: 5px;
+    border: 1px solid #1a191c;
+    color: #c0caf5;
+    background-color: #1a191c;
+}
+
+#input image {
+    color: #c0caf5;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #1a191c;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #1a191c;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #c0caf5;
+}
+
+/* Entradas normales */
+#entry {
+    background-color: #1a191c;
+}
+
+/* Subelementos dentro de las entradas desplegables */
+#entry box {
+    /* background-color: #000000; */
+    /* Fondo negro para subitems */
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#entry:selected {
+    background-color: #29282c;
+    font-weight: normal;
+}
+
+#text:selected {
+    background-color: #29282c;
+    font-weight: normal;
+}
