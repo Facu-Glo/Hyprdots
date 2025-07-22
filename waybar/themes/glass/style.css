@@ -183,8 +183,8 @@ window#waybar.empty #window {
 }
 
 #pulseaudio.muted {
-    background-color: @backgrounddark;
-    color: #dadada;
+    background-color: #000000;
+    color: #2e2e2e;
 }
 
 
