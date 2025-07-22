@@ -1,0 +1,290 @@
+/*
+
+ * __        __          _                  ____  _         _
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___|
+ *                 |___/                              |___/
+ *
+ * -----------------------------------------------------
+*/
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+
+@import 'colors.css';
+
+* {
+    font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    border: none;
+    /* border-radius: 10px; */
+}
+
+window#waybar {
+    background-color: transparent;
+    font-size: 13px;
+}
+
+/* -----------------------------------------------------
+ * Workspaces
+ * ----------------------------------------------------- */
+
+#workspaces {
+    background: #000000;
+    margin: 0px 4px 0px 10px;
+    padding: 0px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: solid 0.8px @textcolor4;
+}
+
+#workspaces button {
+    transition: none;
+    background: transparent;
+    margin-right: 4px;
+}
+
+#workspaces button.persistent {
+    transition: none;
+    color: #898989;
+    background: transparent;
+}
+
+#workspaces button.empty {
+    color: #3c3c3c;
+    transition: none;
+    background: transparent;
+    font-size: 11px;
+}
+
+#workspaces button.active {
+    transition: none;
+    color: #FFFFFF;
+    background: transparent;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#workspaces button.urgent {
+    color: #FF5555;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+    background-color: #000000;
+}
+
+tooltip label {
+    padding: 0px;
+    color: #dadada;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+    background: #000000;
+    margin: 0px 4px 0px 4px;
+    padding: 2px 10px 2px 10px;
+    border-radius: 10px;
+    color: #dadada;
+    font-weight: normal;
+    border: solid 0.8px @textcolor4;
+}
+
+window#waybar.empty #window {
+    all: unset;
+}
+
+/* -----------------------------------------------------
+ * Taskbar
+ * ----------------------------------------------------- */
+
+#taskbar {
+    background: #000000;
+    margin: 0px 4px 0px 4px;
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-style: normal;
+    border: solid 0.8px @textcolor4;
+}
+
+#taskbar button {
+    margin: 0;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+}
+
+#taskbar.empty {
+    all: unset;
+}
+
+/* -----------------------------------------------------
+ * Custom Notification
+ * ----------------------------------------------------- */
+
+#custom-notification {
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 4px 10px 2px 10px;
+    margin: 0px 10px 0px 4px;
+    border: solid 0.8px @textcolor4;
+    color: #dadada;
+}
+
+/* -----------------------------------------------------
+ * Custom Exit
+ * ----------------------------------------------------- */
+
+#custom-appmenuicon {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 2px 14px 2px 10px;
+    margin: 0px 4px 2px 4px;
+    border: solid 0.8px @textcolor4;
+    color: #dadada;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+    background-color: #000000;
+    color: #dadada;
+    font-size: 13.5px;
+    border-radius: 10px;
+    padding: 3px 10px 0px 10px;
+    margin: 0px 4px 0px 4px;
+    border: solid 0.8px @textcolor4
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+    background-color: #000000;
+    color: #dadada;
+    border-radius: 10px;
+    padding: 4px 10px 2px 10px;
+    margin: 0px 4px 0px 4px;
+    border: solid 0.8px @textcolor4;
+}
+
+#pulseaudio.muted {
+    background-color: @backgrounddark;
+    color: #dadada;
+}
+
+
+#backlight {
+    background-color: #000000;
+    color: #dadada;
+    border-radius: 10px;
+    padding: 4px 10px 2px 10px;
+    margin: 0px 4px 0px 4px;
+    border: solid 0.8px @textcolor4;
+}
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+    background-color: #000000;
+    color: #dadada;
+    border-radius: 10px;
+    padding: 4px 10px 2px 10px;
+    margin: 0px 4px 2px 4px;
+    /*opacity: 0.8;*/
+    border: solid 0.8px @textcolor4;
+}
+
+#network.ethernet {
+    background-color: #000000;
+    color: #dadada;
+}
+
+#network.wifi {
+    background-color: #000000;
+    color: #dadada;
+}
+
+/* -----------------------------------------------------
+ * Bluetooth
+ * ----------------------------------------------------- */
+
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected {
+    background-color: #000000;
+    color: #dadada;
+    border-radius: 10px;
+    padding: 4px 10px 2px 10px;
+    margin: 0px 4px 2px 4px;
+    border: solid 0.8px @textcolor4;
+}
+
+#bluetooth.off {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+#battery {
+    background-color: #000000;
+    color: #dadada;
+    border-radius: 10px;
+    padding: 4px 10px 2px 10px;
+    margin: 0px 4px 0px 4px;
+    border: solid 0.8px @textcolor4;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #36d95b;
+}
+
+#battery.warning:not(.charging) {
+    color: #f5a623;
+}
+
+#battery.critical:not(.charging) {
+    color: #ff5555;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+    padding: 2px 10px 2px 10px;
+    margin: 0px 4px 0px 4px;
+    background-color: #000000;
+    color: #dadada;
+    border-radius: 10px;
+    border: solid 0.8px @textcolor4;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+}

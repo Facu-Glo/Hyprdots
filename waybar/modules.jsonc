@@ -1,0 +1,145 @@
+//  __  __           _       _
+// |  \/  | ___   __| |_   _| | ___  ___
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
+// | |  | | (_) | (_| | |_| | |  __/\__ \
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/
+//
+//
+{
+  // Workspaces
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate",
+    "all-outputs": true,
+    "active-only": false,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "format": "{icon}",
+    "format": "{icon}",
+    "format-icons": {
+      "active": "󰮯",
+      "empty": "",
+      "persistent": "󰊠"
+    }
+  },
+
+  // Taskbar
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["Alacritty", "kitty"],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      "Foot Server": "Terminal"
+    }
+  },
+
+  // Hyprland Window
+  "hyprland/window": {
+    "format": "<span  weight='bold' >{class}</span>",
+    "max-length": 120,
+    "icon": false,
+    "icon-size": 13
+  },
+
+  // SwayNC
+  "custom/notification": {
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "none": "",
+      "dnd-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+    "tooltip": false
+  },
+
+  // System tray
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+
+  // Clock
+  "clock": {
+    "interval": 60,
+    "timezone": "America/Argentina/Buenos_Aires",
+    "format": "{:L%A  %d/%m  |  %H:%M}",
+    "tooltip": false,
+    "on-click": "kitty -T calcurse -e calcurse"
+  },
+
+  // Battery
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-full": "Completa",
+    "format-charging": "  {capacity}%  {time}",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "tooltip": "{timeTo}"
+  },
+
+  // Pulseaudio
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-source-muted": "{volume}",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+  // Brillo
+  "backlight": {
+    "interval": 60,
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󱩎", "󱩑", "󱩓", "󱩕", "󰛨"],
+    "scroll-step": 5,
+    "tooltip": false
+  }
+
+  // Bluetooth
+  // "bluetooth": {
+  //   "format": " {status}",
+  //   "format-disabled": "",
+  //   "format-off": "",
+  //   "interval": 30,
+  //   "on-click": "blueman-manager",
+  //   "format-no-controller": ""
+  // },
+}
