@@ -99,7 +99,7 @@
     },
     "format": "{icon} {capacity}%",
     "format-full": "Completa",
-    "format-charging": "  {capacity}%  {time}",
+    "format-charging": "  {capacity}%  {time}",
     "format-alt": "{icon} {time}",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "tooltip": "{timeTo}",
