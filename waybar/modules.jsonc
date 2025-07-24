@@ -17,15 +17,15 @@
       "2": [],
       "3": [],
       "4": [],
-      "5": []
+      "5": [],
     },
     "format": "{icon}",
     "format": "{icon}",
     "format-icons": {
       "active": "󰮯",
       "empty": "",
-      "persistent": "󰊠"
-    }
+      "persistent": "󰊠",
+    },
   },
 
   // Taskbar
@@ -37,12 +37,12 @@
     "on-click-middle": "close",
     "ignore-list": ["Alacritty", "kitty"],
     "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
+      "firefoxdeveloperedition": "firefox-developer-edition",
     },
     "rewrite": {
       "Firefox Web Browser": "Firefox",
-      "Foot Server": "Terminal"
-    }
+      "Foot Server": "Terminal",
+    },
   },
 
   // Hyprland Window
@@ -50,7 +50,7 @@
     "format": "<span  weight='bold' >{class}</span>",
     "max-length": 120,
     "icon": false,
-    "icon-size": 13
+    "icon-size": 13,
   },
 
   // SwayNC
@@ -64,7 +64,7 @@
       "inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
       "inhibited-none": "",
       "dnd-inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
-      "dnd-inhibited-none": ""
+      "dnd-inhibited-none": "",
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -72,13 +72,13 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true,
-    "tooltip": false
+    "tooltip": false,
   },
 
   // System tray
   "tray": {
     "icon-size": 18,
-    "spacing": 10
+    "spacing": 10,
   },
 
   // Clock
@@ -87,7 +87,7 @@
     "timezone": "America/Argentina/Buenos_Aires",
     "format": "{:L%A  %d/%m  |  %H:%M}",
     "tooltip": false,
-    "on-click": "kitty -T calcurse -e calcurse"
+    "on-click": "kitty -T calcurse -e calcurse",
   },
 
   // Battery
@@ -95,19 +95,19 @@
     "interval": 60,
     "states": {
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
     "format": "{icon} {capacity}%",
     "format-full": "Completa",
     "format-charging": "  {capacity}%  {time}",
     "format-alt": "{icon} {time}",
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "tooltip": "{timeTo}"
+    "tooltip": "{timeTo}",
   },
 
   // Pulseaudio
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-bluetooth": "{icon} {volume}%",
     "format-source-muted": "{volume}",
     "format-icons": {
@@ -117,21 +117,21 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["", "", ""],
     },
     "on-click": "pavucontrol",
-    "tooltip": false
+    "tooltip": false,
   },
 
   // Brillo
   "backlight": {
     "interval": 60,
     "device": "intel_backlight",
-    "format": "{icon} {percent}%",
+    "format": "{icon}  {percent}%",
     "format-icons": ["󱩎", "󱩑", "󱩓", "󱩕", "󰛨"],
     "scroll-step": 5,
-    "tooltip": false
-  }
+    "tooltip": false,
+  },
 
   // Bluetooth
   // "bluetooth": {
