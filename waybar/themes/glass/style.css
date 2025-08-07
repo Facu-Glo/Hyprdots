@@ -43,7 +43,7 @@ window#waybar {
 #workspaces button {
     transition: none;
     background: transparent;
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 #workspaces button:hover {
